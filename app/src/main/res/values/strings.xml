@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">ProjetoAndroid</string>
+    <string name="app_name">CADASTRO</string>
 
     <!--strings para tela de cadastro(fragment) do subscribe-->
-    <string name="subscriber_name_hint">Subscriber\'s name</string>
+    <string name="subscriber_name_hint">Nome</string>
     <string name="subscriber_email_hint">E-mail</string>
-    <string name="subscriber_button">Add</string>
+    <string name="subscriber_button">Salvar</string>
     <string name="subscriber_title">Subscriber</string>
 </resources>

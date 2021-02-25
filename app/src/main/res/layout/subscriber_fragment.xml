@@ -18,12 +18,14 @@
         app:layout_constraintEnd_toEndOf="parent"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_email" />
+        app:layout_constraintTop_toBottomOf="@+id/input_email"
+        app:layout_constraintVertical_bias="0.292" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
         android:hint="@string/subscriber_name_hint"
         android:inputType="textCapSentences"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,10 +36,11 @@
         android:id="@+id/input_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="76dp"
         android:hint="@string/subscriber_email_hint"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_name" />
 
