@@ -4,7 +4,7 @@
 * Teacher Alysson Nogueira
 * FUNDATEC PROFESSIONAL SCHOOL
 
-<img src="/app/img/image_1.png" width="300" height="400">
+<img src="/app/img/image_2.png" width="300" height="400">
 
 | Item | Goal               | Result                  |
 |------|--------------------|-------------------------|
