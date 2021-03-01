@@ -4,13 +4,16 @@
 * Teacher Alysson Nogueira
 * FUNDATEC PROFESSIONAL SCHOOL
 
-<img src="/app/img/image_2.png" width="300" height="400">
+## Description
+* Create a subscriber to generate schedules
+
+<img src="/app/img/image_2.png" width="350" height="400">
 
 | Item | Goal               | Result                  |
 |------|--------------------|-------------------------|
-|   1  |Subscribe           |generate schedule        |
-|   2  |                    |                         |
-|   4  |                    |                         |
+|   1  |input text          |insert data              |
+|   2  |save                |store in the database    |
+|   4  |list                |fetch from the database  |
 |   3  |                    |                         |
 
 ### Referencies
