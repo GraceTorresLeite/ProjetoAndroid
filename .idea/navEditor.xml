@@ -20,6 +20,11 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="subscriberListFragment">
+                    <value>
+                      <LayoutPositions />
+                    </value>
+                  </entry>
                 </map>
               </option>
             </LayoutPositions>

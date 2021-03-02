@@ -3,11 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/subscriberFragment">
-
+    app:startDestination="@id/subscriberListFragment">
+    <fragment
+        android:id="@+id/subscriberListFragment"
+        android:name="com.example.projetoandroid.ui.subscriber.subscriberList.SubscriberListFragment"
+        android:label="Lista de Cadastros" />
     <fragment
         android:id="@+id/subscriberFragment"
         android:name="com.example.projetoandroid.ui.subscriber.SubscriberFragment"
         android:label="@string/subscriber_title"
         tools:layout="@layout/subscriber_fragment" />
+
 </navigation>
