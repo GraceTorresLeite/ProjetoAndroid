@@ -7,7 +7,7 @@
 ## Description
 * Create a subscriber to generate schedules
 
-<img src="/app/img/image_3.png" width="350" height="400">
+<img src="/app/img/image_4.png" width="350" height="400">
 
 | Item | Goal               | Result                  |
 |------|--------------------|-------------------------|
