@@ -11,12 +11,13 @@ import com.example.projetoandroid.data.db.entity.SubscriberEntity
 import kotlinx.android.synthetic.main.subscriber_item.view.*
 
 class SubscriberListAdapter(
-    private val subscribers: List<SubscriberEntity>
+        private val subscribers: List<SubscriberEntity>
 ) : RecyclerView.Adapter<SubscriberListAdapter.SubscriberListViewHolder>() {
+    var onItemClick:((entity:SubscriberEntity)-> Unit)?=null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SubscriberListViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.subscriber_item, parent, false)
+                .inflate(R.layout.subscriber_item, parent, false)
 
         return SubscriberListViewHolder(view)
     }
@@ -27,13 +28,17 @@ class SubscriberListAdapter(
 
     override fun getItemCount(): Int = subscribers.size
 
-    class SubscriberListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class SubscriberListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val textViewSubscriberName: TextView = itemView.text_subscriber_name
         private val textViewSubscriberEmail: TextView = itemView.text_subscriber_email
 
         fun bindView(subscriber: SubscriberEntity) {
             textViewSubscriberName.text = subscriber.name
             textViewSubscriberEmail.text = subscriber.email
+
+            itemView.setOnClickListener{
+                onItemClick?.invoke(subscriber)
+            }
         }
     }
 }

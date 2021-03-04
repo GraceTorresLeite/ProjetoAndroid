@@ -1,6 +1,6 @@
 package com.example.projetoandroid.repository
 
-import androidx.lifecycle.LiveData
+
 import com.example.projetoandroid.data.db.dao.SubscriberDAO
 import com.example.projetoandroid.data.db.entity.SubscriberEntity
 
@@ -33,7 +33,7 @@ class DatabaseDataSource (private val subscriberDAO: SubscriberDAO) : Subscriber
         subscriberDAO.deleteAll()
     }
 
-    override suspend fun getAllSubscribers(): LiveData<List<SubscriberEntity>> {
+    override suspend fun getAllSubscribers(): List<SubscriberEntity> {
         return subscriberDAO.getAll()
     }
 }

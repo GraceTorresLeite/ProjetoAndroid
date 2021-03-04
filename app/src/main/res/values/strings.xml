@@ -5,9 +5,12 @@
     <string name="subscriber_name_hint">Nome</string>
     <string name="subscriber_email_hint">E-mail</string>
     <string name="subscriber_button">Salvar</string>
-    <string name="subscriber_title">Subscriber</string>
+    <string name="subscriber_title">Cadastre-se</string>
 
     <!--informando ao usuário um registro no banco de dados-->
     <string name="subscriber_inserted_successfully">Subscriber was successfully inserted</string>
     <string name="subscriber_error_to_insert">There was an error when inserting Subscriber</string>
+
+    <!-- subscriberList-->
+    <string name="subscriberList_title"> Lista de cadastro</string>
 </resources>

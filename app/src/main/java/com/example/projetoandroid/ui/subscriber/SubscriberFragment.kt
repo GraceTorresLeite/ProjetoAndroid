@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 //import androidx.lifecycle.observe - deprecated , solicitou retirada
 import com.example.projetoandroid.R
 import com.example.projetoandroid.extension.hideKeyboard
@@ -40,21 +41,21 @@ class SubscriberFragment : Fragment(R.layout.subscriber_fragment) { //=> retiram
         setListeners()
     }
 
-    private fun observeEvents() {                                          // redefinindo nome do evento
+    private fun observeEvents() {
         viewModel.subscriberStateEventData.observe(viewLifecycleOwner) { subscriberState ->
             when (subscriberState) {
                 is SubscriberViewModel.SubscriberState.Inserted -> {
                     clearFields()
                     hideKeyboard()
                     requireView().requestFocus()
+
+                    findNavController().popBackStack()
                 }
             }
         }
 
         viewModel.messageEventData.observe(viewLifecycleOwner) { stringResId ->
             Snackbar.make(requireView(), stringResId, Snackbar.LENGTH_LONG).show()
-            // parecido com a criação do toste
-
         }
     }
 
@@ -66,7 +67,7 @@ class SubscriberFragment : Fragment(R.layout.subscriber_fragment) { //=> retiram
     private fun hideKeyboard() {
         val parentActivity = requireActivity()
         if (parentActivity is AppCompatActivity) {
-            parentActivity.hideKeyboard() //implementar a extension
+            parentActivity.hideKeyboard()
         }
     }
 
@@ -78,5 +79,4 @@ class SubscriberFragment : Fragment(R.layout.subscriber_fragment) { //=> retiram
             viewModel.addSubscriber(name, email)
         }
     }
-
 }
